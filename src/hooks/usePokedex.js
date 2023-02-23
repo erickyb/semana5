@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { paginationLogic } from "../utils/pagination"
 
 const usePokedex = () => {
@@ -20,27 +20,32 @@ const usePokedex = () => {
     setPokemonName(e.target.pokemonName.value)
   }
   const handleNextPage = () => {
-    const nextPage = currentPage + 1
-    if (nextPage > lastPage) {
+    const newPage = currentPage + 1
+    if (newPage > lastPage) {
       setCurrentPage(1)
     } else {
-      setCurrentPage()
+      setCurrentPage(newPage)
     }
   }
 
   const handlePreviusPage = () => {
-    const nextPage = currentPage - 1
-    if (nextPage < 1) {
+    const newPage = currentPage - 1
+    if (newPage < 1) {
       setCurrentPage(lastPage)
     } else {
-      setCurrentPage(nextPage)
+      setCurrentPage(newPage)
     }
   }
-  const { pagesInBlock, lastPage, pokemonsInPage } = paginationLogic(pokemonsFilter, currentPage)
+
+ 
+  const { pagesInBlock, lastPage, pokemonsInPage } = useMemo(() => {
+
+    return paginationLogic(pokemonsFilter, currentPage)
+  }, [pokemonsFilter, currentPage])
 
   useEffect(() => {
 
-    const URL = `https://pokeapi.co/api/v2/${selectType ? `type/${selectType}/` : "pokemon/?limit=20"}`
+    const URL = `https://pokeapi.co/api/v2/${selectType ? `type/${selectType}/` : "pokemon/?limit=1279"}`
     axios
       .get(URL)
       .then((res) => {
@@ -83,13 +88,17 @@ const usePokedex = () => {
   }, [pokemons])
 
   return {
-  handleSubmit,
+    handleSubmit,
     handleChangeSelect,
     types,
     pokemonsInPage,
-    handleNextPage,
     handlePreviusPage,
-    pagesInBlock
+    handleNextPage,
+    pagesInBlock,
+    setCurrentPage,//fggdfg
+
+
+
 };
 }
 

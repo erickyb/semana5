@@ -1,16 +1,15 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import PokemonCard from '../components/pokedex/PokemonCard'
 import usePokedex from '../hooks/usePokedex'
-import { paginationLogic } from '../utils/pagination'
 import "./style/pokedex.css"
-// verificacdo 150
 
   const Pokedex = () => {
  
   const nameTrainer = useSelector(store => store.nameTrainer)
-    const {
+    
+    const { 
       handleSubmit,
       handleChangeSelect,
       types,
@@ -18,6 +17,8 @@ import "./style/pokedex.css"
       handlePreviusPage,
       handleNextPage,
       pagesInBlock,
+      setCurrentPage,
+
     } = usePokedex();
    return (
     <main className='pokedex'> 
