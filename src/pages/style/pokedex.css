@@ -1,0 +1,21 @@
+body{
+  background-color: rgb(255, 255, 255);
+
+ 
+}
+
+.pokedex{
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+
+
+.pokedex_Card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;  
+  justify-content: center;
+  
+
+} 
