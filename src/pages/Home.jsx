@@ -1,7 +1,7 @@
 import React from 'react'
 import { setNameTrainerGlobal } from '../store/slices/nameTrainer.slice';
 import { useDispatch } from 'react-redux';
-
+import "./style/Home.css"
 const Home = () => {
 const dispatch = useDispatch()
   const handleSubmit = (e) => {
@@ -17,11 +17,11 @@ const dispatch = useDispatch()
         <div>
            <img src="/imagen/pokedex.png " alt="imagen_inicio" />
         </div>  
-         <h2>Hello Trainer!</h2>
-        <p>Give me your name to Start! </p>
+         <h2 className='home'>Hello Trainer!</h2>
+        <p className='home'>Give me your name to Start! </p>
         <form onSubmit={handleSubmit}>
-          <input id="nameTrainer" type="text" placeholder='your name...'/>
-          <button>Start!</button>
+          <input className='home-input' id="nameTrainer" type="text" placeholder='your name...'/>
+          <button className='home-btn'>Start!</button>
         </form>
       </section>
    </main>

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='header__red'>
-        <div className='inicio '> inicio</div>
+      
         <div className='header__img'>
           <img src='/public/imagen/pokedex.png' alt="" />
         </div>

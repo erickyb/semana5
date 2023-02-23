@@ -1,0 +1,33 @@
+body{
+
+  height: 1000px;
+}
+.home{
+  font-size: 50px;
+  margin: 0;
+}
+.home-input{
+  margin: 10px 100px;
+  width: 300px;
+  height: 40px;
+}
+.home-btn{
+  margin: 0;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: #213435;
+  color: #a4a48a;
+  cursor: pointer;
+  transition: .5s;
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 25px;
+ 
+}
+ .home-btn:hover{
+  color: white;
+  border-radius: 15px;
+ }
+
