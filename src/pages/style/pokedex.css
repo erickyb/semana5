@@ -19,8 +19,8 @@ body{
 }
 .pokedex_orden{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
   justify-content: center;
 
 }
