@@ -23,18 +23,35 @@ import "./style/Home.css"
    return (
     <main className='pokedex '> 
        <p className='home'><span> welcome {nameTrainer}, </span> here  you cacn ind information about your favorite Pokemon</p>
-      <form onSubmit={handleSubmit}>
-        <div> 
-           <input className='home-input'  type="text" id="pokemonName" placeholder='search your pokemon'  />
-           <button className='home-btn'> search</button>
-        </div>
+      <form onSubmit={handleSubmit} className="pokedesx-form">
+         <div className='pokedex_orden'> 
+          
+          
+           <div className='div'>
+             <input type="text" id="pokemonName" className='input' required />
+             <label className='lbl-name input'>
+               <span className='text-name'>search your pokemon</span>
+             </label>
+           </div>
+           
+           <button className='btn-neon button'>
+             <span className='span1' ></span>
+             <span className='span2' ></span>
+             <span className='span3' ></span>
+             <span className='span4' ></span>
+             search
+           </button>
+         
+           {/* <button className='home-btn'> search</button> */}
+        {/* </div> */}
 
-        <select onChange={handleChangeSelect}>
+        <select onChange={handleChangeSelect} className="pokedex-select">
           <option  value="">All</option>
           {
             types.map(type => <option key={type.url}>{type.name}</option>)
           }
-        </select>
+         </select>
+         </div>
       </form>
 
       <section className='pokedex_Card rgb'  >

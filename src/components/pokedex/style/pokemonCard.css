@@ -1,29 +1,18 @@
 #card {
   padding: 0px !important;
-  /* background-color: #000 !important; */
   border-radius: 10px !important;
 }
-/* .pokemonCard1{
-    width: min(820px, 100%);*/
-      /* border: 10px solid green; */
-    /*  border-radius: 10px;
-      position: relative;
-      overflow: hidden;
-} */
+
 
 .pokemonCard {
   width: min(320px,100%);
-  /* border: 10px solid green; */
-  border-radius: 10px;
+   border-radius: 10px;
   position: relative;
   overflow: hidden;
-/* cambio  */
-  /* background:#000; */
 }
 
 .pokemonCar__header {
   height: 200px;
-  /* background-color: green; */
 }
  
 .pokemonCard__body{
@@ -80,6 +69,12 @@ font-size: 18px;
 margin-top: 4px;
 
 }
+
+
+
+
+
+
 
 .border-normal {
   border: 10px solid #735259;
