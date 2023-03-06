@@ -11,14 +11,7 @@
 
   --color-fondo:#0d0d0d;
 
-
-  
---color-primary-0: #970808; 	
---color-primary-1: #EB0202; 
---color-primary-2: #BA0B0B; 
---color-primary-3: #690000; 
---color-primary-4: #3E0000; 
-
+  --color-cars:#202020;
 }
 
 body{
@@ -119,18 +112,18 @@ color: #fff;
 letter-spacing: 6px;
 overflow: hidden;
 transition: 0.2s;
-background: #202020;
+background: var(--color-cars);
 border: 0;
 
 }
 .btn-neon:hover{
  background: var(--color-btn);
 
- color:#202020;
+ color:var(--color-cars);
 
  box-shadow: 0 0 10px var(--color-btn), 0 0 40px var(--color-btn), 0 0 80px var(--color-btn);
  /* border-radius: 10px; */
- transition-delay: 1s;
+ transition-delay: 0.2s;
 }
 
 .btn-neon span{

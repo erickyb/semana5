@@ -29,17 +29,19 @@ const Pokemon = () => {
 
   return (<main >
     { /*parte superior*/}
-    <div style={{ padding: "0" }} className={`pokemon__contenedor1 pokemonCard1`} onClick={handleClickPokemon} >
-      <div className={`pokemon__encabezado pokemonCar__header1 bg-lg-${pokemon?.types[0].type.name}`}>
-      <div className='pokemon__contenedor-cuerpo'>
-        <section className='pokemon__contenedor-card'>
-            <img className="pokemon__img " src = {pokemon?.sprites.other["official-artwork"].front_default}
-              alt="" />
-        </section>
+    <div style={{ padding: "24px" }} className='pokemonCard1' onClick={handleClickPokemon} >
+      <div className={`pokemon__encabezado bg-lg-${pokemon?.types[0].type.name}`}>
+      {/* <div className='pokemon__contenedor-cuerpo pokemonCar__header1' pokemon__contenedor1> */}
+     
      
       { /*Body*/}
 
-      <section className='pokemon__body' >
+          <section className='pokemon__body' >
+            <section className='pokemon__contenedor-card'>
+            
+              <img className="pokemon__img " src={pokemon?.sprites.other["official-artwork"].front_default}
+                alt="" />
+            </section>
             <section className='pokemon__contenedor'>
            
               <h2 className='id'  ># {pokemon?.id}</h2>
@@ -92,7 +94,7 @@ const Pokemon = () => {
         </section>
       </div>
      </div>
-    </div>
+    {/* </div> */}
    </main>
   )
 }

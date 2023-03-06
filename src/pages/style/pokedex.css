@@ -57,8 +57,10 @@ body{
   grid-template-columns: repeat(3, 1fr);
   gap:20px;  
   justify-content: center;
-  
-
+  cursor: pointer;
+  transform-style: preserve-3d;
+  /* background: rgba(0, 0, 0, 0.9); */
+    
 } 
 
 

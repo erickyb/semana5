@@ -26,13 +26,19 @@ const PokemonCard = ({ pokemonUrl }) => {
   
   return (
     <Tilt
-      id="card"
+      className="card"
       options={{ scale: 2 }}
     >
       {/* options={{ scale: 2, max: 25 }} */}
-      <article style={{ padding: 0 }} className={`pokemonCard border-${pokemon?.types[0].type.name}`} onClick={handleClickPokemon}>
+      {/* <article style={{ padding: 0 }} className={`pokemonCard border-${pokemon?.types[0].type.name}`} onClick={handleClickPokemon}> */}
+
+
+      <article style={{ padding: 0 }} className={`pokemonCard`} onClick={handleClickPokemon}> 
+
         
-      <section className={`pokemonCar__header bg-lg-${pokemon?.types[0].type.name}`}></section>
+      {/* <section className={`pokemonCar__header bg-lg-${pokemon?.types[0].type.name}`}></section> */}
+        
+        <section className={`pokemonCar__header`}></section>
       <section className='pokemonCard__body'>
         <div className='pokemonCard__img'>
           <img src={ pokemon?.sprites.other["official-artwork"].front_default} alt="" />
