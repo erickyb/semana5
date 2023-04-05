@@ -1,4 +1,4 @@
 # POKEMON
 
 ver mi proyecto ccon ese link: 
-https://github.com/erickyb/semana5
+https://lucent-cheesecake-5b5298.netlify.app
